@@ -1,0 +1,1536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:gravity="right">
+
+        <TextView
+            android:id="@+id/playerTurn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:text="等待中"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/playerIPText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:text="玩家IP:"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/playerIPInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:hint="请输入对手IP"
+            android:text="192.168.137."
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/searchIP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查询本机IP" />
+
+            <Button
+                android:id="@+id/connect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="连接对手" />
+
+            <Button
+                android:id="@+id/surrender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="认输" />
+
+            <Button
+                android:id="@+id/restart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="重新开始" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/map0_0"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map0_1"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map0_2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map0_3"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map0_4"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map0_5"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map0_6"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map0_7"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map0_8"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map0_9"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map0_10"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map0_11"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map0_12"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map0_13"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map0_14"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/map1_0"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map1_1"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map1_2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map1_3"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map1_4"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map1_5"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map1_6"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map1_7"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map1_8"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map1_9"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map1_10"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map1_11"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map1_12"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map1_13"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map1_14"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/map2_0"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map2_1"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map2_2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map2_3"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map2_4"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map2_5"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map2_6"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map2_7"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map2_8"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map2_9"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map2_10"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map2_11"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map2_12"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map2_13"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map2_14"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/map3_0"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map3_1"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map3_2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map3_3"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map3_4"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map3_5"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map3_6"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map3_7"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map3_8"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map3_9"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map3_10"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map3_11"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map3_12"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map3_13"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map3_14"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/map4_0"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map4_1"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map4_2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map4_3"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map4_4"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map4_5"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map4_6"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map4_7"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map4_8"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map4_9"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map4_10"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map4_11"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map4_12"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map4_13"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map4_14"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/map5_0"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map5_1"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map5_2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map5_3"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map5_4"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map5_5"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map5_6"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map5_7"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map5_8"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map5_9"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map5_10"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map5_11"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map5_12"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map5_13"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map5_14"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/map6_0"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map6_1"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map6_2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map6_3"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map6_4"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map6_5"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map6_6"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map6_7"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map6_8"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map6_9"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map6_10"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map6_11"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map6_12"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map6_13"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map6_14"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/map7_0"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map7_1"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map7_2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map7_3"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map7_4"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map7_5"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map7_6"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map7_7"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map7_8"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map7_9"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map7_10"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map7_11"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map7_12"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map7_13"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map7_14"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/map8_0"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map8_1"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map8_2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map8_3"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map8_4"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map8_5"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map8_6"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map8_7"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map8_8"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map8_9"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map8_10"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map8_11"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map8_12"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map8_13"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map8_14"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/map9_0"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map9_1"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map9_2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map9_3"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map9_4"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map9_5"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map9_6"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map9_7"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map9_8"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map9_9"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map9_10"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map9_11"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map9_12"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map9_13"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map9_14"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/map10_0"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map10_1"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map10_2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map10_3"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map10_4"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map10_5"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map10_6"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map10_7"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map10_8"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map10_9"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map10_10"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map10_11"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map10_12"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map10_13"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map10_14"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/map11_0"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map11_1"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map11_2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map11_3"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map11_4"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map11_5"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map11_6"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map11_7"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map11_8"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map11_9"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map11_10"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map11_11"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map11_12"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map11_13"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map11_14"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/map12_0"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map12_1"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map12_2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map12_3"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map12_4"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map12_5"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map12_6"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map12_7"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map12_8"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map12_9"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map12_10"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map12_11"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map12_12"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map12_13"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map12_14"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/map13_0"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map13_1"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map13_2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map13_3"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map13_4"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map13_5"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map13_6"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map13_7"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map13_8"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map13_9"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map13_10"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map13_11"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map13_12"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map13_13"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map13_14"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/map14_0"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map14_1"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map14_2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map14_3"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map14_4"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map14_5"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map14_6"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map14_7"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map14_8"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map14_9"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map14_10"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map14_11"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map14_12"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map14_13"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/map14_14"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@color/colorPrimary" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
